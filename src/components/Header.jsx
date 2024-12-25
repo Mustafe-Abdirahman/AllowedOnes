@@ -14,7 +14,7 @@ const Header = () => {
   };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <div className="bg-white">
+    <div className="bg-white fixed inset-x-0 top-0 z-50">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -53,14 +53,14 @@ const Header = () => {
                 to="/about"
                 className="text-sm/6 font-semibold text-gray-900"
               >
-                <li>About</li>
+                <li>Price</li>
               </Link>
             </ul>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            <button className="rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-md hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Get in touch
+            </button>
           </div>
         </nav>
         <Dialog
@@ -93,6 +93,18 @@ const Header = () => {
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <li>Home</li>
+                    </Link>
+                    <Link
+                      to="/"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      <li>Price</li>
+                    </Link>
+                    <Link
+                      to="/"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      <li>Service</li>
                     </Link>
                   </ul>
                 </div>
