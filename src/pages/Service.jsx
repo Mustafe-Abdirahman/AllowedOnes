@@ -27,7 +27,7 @@ const features = [
   },
 ];
 
-export default function Service() {
+const Service = () => {
   return (
     <div className="bg-white py-4 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -62,4 +62,6 @@ export default function Service() {
       </div>
     </div>
   );
-}
+};
+
+export default Service;
