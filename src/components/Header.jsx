@@ -22,7 +22,7 @@ const Header = () => {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Kaabe Tech</span>
+              <span className="sr-only">Kaabe Tech Digital</span>
               <img alt="logo" src={logo} className="h-14 w-auto" />
             </a>
           </div>
@@ -105,6 +105,18 @@ const Header = () => {
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <li>Service</li>
+                    </Link>
+                    <Link
+                      to="/"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      <li>Projects</li>
+                    </Link>
+                    <Link
+                      to="/"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      <li>Contact Us</li>
                     </Link>
                   </ul>
                 </div>
