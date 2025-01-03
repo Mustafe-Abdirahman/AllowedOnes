@@ -22,7 +22,7 @@ const Header = () => {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Kaafi Digital</span>
+              <span className="sr-only">Kaabe Tech</span>
               <img alt="logo" src={logo} className="h-14 w-auto" />
             </a>
           </div>
