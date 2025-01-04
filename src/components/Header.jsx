@@ -14,7 +14,7 @@ const Header = () => {
   };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <div className="bg-white fixed inset-x-0 top-0 z-50">
+    <div className="bg-white ">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -50,7 +50,7 @@ const Header = () => {
                 <li>Service</li>
               </Button>
               <Link
-                to="/about"
+                to="/PricingTable"
                 className="text-sm/6 font-semibold text-gray-900"
               >
                 <li>Price</li>
@@ -107,7 +107,7 @@ const Header = () => {
                       <li>Service</li>
                     </Link>
                     <Link
-                      to="/"
+                      to="/PricingTable"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <li>Projects</li>
