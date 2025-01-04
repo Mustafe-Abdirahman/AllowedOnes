@@ -1,3 +1,4 @@
+import Duties from "./Duties";
 import Price from "./Price";
 import Service from "./Service";
 
@@ -71,6 +72,7 @@ export default function Home() {
         </div>
       </div>
       <Service />
+      <Duties />
     </div>
   );
 }
