@@ -1,4 +1,4 @@
-import logo from "../assets/mn.png";
+import logo from "../assets/all.jfif";
 
 const About = () => {
   return (
@@ -14,7 +14,7 @@ const About = () => {
         />
         <div className="max-w-2xl text-left px-4 sm:px-0">
           <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-            TayoPro: Your Partner in Digital Success
+            Kaabe Tech: Your Partner in Digital Success
           </h2>
           <p className="text-base sm:text-lg mb-4">
             We are committed to creating exceptional digital solutions that help

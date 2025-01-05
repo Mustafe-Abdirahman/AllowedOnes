@@ -5,25 +5,22 @@ import { Link } from "react-router-dom";
 import logo from "../assets/a.png";
 
 const Header = () => {
-  const handleClick = (id) => {
-    console.log("clicked");
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div className="bg-white ">
+    <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
         >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Kaabe Tech Digital</span>
+          <div className="flex items-center lg:flex-1">
+            {/* Logo comes first, then the name */}
+            <a href="#" className="flex items-center -m-1.5 p-1.5">
               <img alt="logo" src={logo} className="h-14 w-auto" />
+              <span className="text-lg font-bold text-gray-900 ml-2">
+                Kaabe Tech
+              </span>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -41,19 +38,17 @@ const Header = () => {
               <Link to="/" className="text-sm/6 font-semibold text-gray-900">
                 <li>Home</li>
               </Link>
-              <Button
-                onClick={() => handleClick("services")}
-                id="services"
-                to={`/`}
-                className="text-sm/6 font-semibold text-gray-900"
-              >
-                <li>Service</li>
-              </Button>
               <Link
                 to="/PricingTable"
                 className="text-sm/6 font-semibold text-gray-900"
               >
                 <li>Price</li>
+              </Link>
+              <Link
+                to="/About"
+                className="text-sm/6 font-semibold text-gray-900"
+              >
+                <li>About</li>
               </Link>
             </ul>
           </div>
@@ -71,9 +66,12 @@ const Header = () => {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img alt="" src={logo} className="h-14 w-auto" />
+              {/* Logo first, name second in mobile view */}
+              <a href="#" className="flex items-center -m-1.5 p-1.5">
+                <img alt="logo" src={logo} className="h-14 w-auto" />
+                <span className="text-lg font-bold text-gray-900 ml-2">
+                  Kaabe Tech
+                </span>
               </a>
               <button
                 type="button"
@@ -90,39 +88,31 @@ const Header = () => {
                   <ul>
                     <Link
                       to="/"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <li>Home</li>
                     </Link>
                     <Link
-                      to="/"
+                      to="/PricingTable"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <li>Price</li>
                     </Link>
                     <Link
-                      to="/"
+                      to="/About"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
-                      <li>Service</li>
-                    </Link>
-                    <Link
-                      to="/PricingTable"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >
-                      <li>Projects</li>
-                    </Link>
-                    <Link
-                      to="/"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >
-                      <li>Contact Us</li>
+                      <li>About</li>
                     </Link>
                   </ul>
                 </div>
                 <div className="py-6">
                   <a
                     href="#"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Get in touch
