@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Service from "./pages/Service";
 import PricingTable from "./pages/Price";
 import About from "./pages/About";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/PricingTable" element={<PricingTable />} />
         <Route path="/About" element={<About />} />
       </Routes>
-      <Header />
+      <Footer />
     </BrowserRouter>
   );
 }
