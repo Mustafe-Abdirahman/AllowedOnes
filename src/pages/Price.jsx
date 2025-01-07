@@ -3,10 +3,6 @@ import React, { useState } from "react";
 const PricingTable = () => {
   const [billingCycle, setBillingCycle] = useState("monthly");
 
-  const handleToggle = () => {
-    setBillingCycle(billingCycle === "monthly" ? "yearly" : "monthly");
-  };
-
   const pricingData = {
     monthly: [
       {
@@ -14,6 +10,9 @@ const PricingTable = () => {
         price: "$19",
         features: [
           "5 products",
+          "Up to 1,000 subscribers",
+          "Basic analytics",
+          "24-hour support response time",
           "Up to 1,000 subscribers",
           "Basic analytics",
           "24-hour support response time",
@@ -27,14 +26,21 @@ const PricingTable = () => {
           "Up to 10,000 subscribers",
           "Advanced analytics",
           "Marketing automations",
+          "Advanced analytics",
+          "Marketing automations",
+          "Advanced analytics",
+          "Marketing automations",
         ],
       },
       {
         title: "Enterprise",
-        price: "Custom",
+        price: null, // Removed pricing
         features: [
           "Unlimited products",
           "Unlimited subscribers",
+          "Advanced analytics",
+          "Dedicated support",
+          "Custom integrations",
           "Advanced analytics",
           "Dedicated support",
           "Custom integrations",
@@ -60,11 +66,14 @@ const PricingTable = () => {
           "Up to 10,000 subscribers",
           "Advanced analytics",
           "Marketing automations",
+          "Up to 10,000 subscribers",
+          "Advanced analytics",
+          "Marketing automations",
         ],
       },
       {
         title: "Enterprise",
-        price: "Custom",
+        price: null, // Removed pricing
         features: [
           "Unlimited products",
           "Unlimited subscribers",
@@ -119,7 +128,11 @@ const PricingTable = () => {
               }`}
             >
               <h2 className="text-xl font-bold mb-4">{plan.title}</h2>
-              <p className="text-4xl font-bold mb-6">{plan.price}/month</p>
+              {plan.price && (
+                <p className="text-4xl font-bold mb-6">
+                  {plan.price}/{billingCycle}
+                </p>
+              )}
               <ul className="space-y-2 mb-6">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
@@ -128,15 +141,6 @@ const PricingTable = () => {
                   </li>
                 ))}
               </ul>
-              {plan.title === "Enterprise" ? (
-                <button className="w-full py-2 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900">
-                  Contact sales
-                </button>
-              ) : (
-                <button className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                  Buy plan
-                </button>
-              )}
             </div>
           ))}
         </div>
