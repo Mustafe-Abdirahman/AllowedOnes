@@ -69,6 +69,11 @@ const PricingTable = () => {
           "Up to 10,000 subscribers",
           "Advanced analytics",
           "Marketing automations",
+          "Advanced analytics",
+          "Marketing automations",
+          "Up to 10,000 subscribers",
+          "Advanced analytics",
+          "Marketing automations",
         ],
       },
       {
