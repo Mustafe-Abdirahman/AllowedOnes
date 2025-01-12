@@ -6,6 +6,7 @@ import Service from "./pages/Service";
 import PricingTable from "./pages/Price";
 import About from "./pages/About";
 import Footer from "./pages/Footer";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/PricingTable" element={<PricingTable />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>
