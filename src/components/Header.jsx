@@ -50,6 +50,12 @@ const Header = () => {
               >
                 <li>About</li>
               </Link>
+              <Link
+                to="/Contact"
+                className="text-sm/6 font-semibold text-gray-900"
+              >
+                <li>Contact</li>
+              </Link>
             </ul>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -106,6 +112,13 @@ const Header = () => {
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <li>About</li>
+                    </Link>
+                    <Link
+                      to="/Contact"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      <li>Contact</li>
                     </Link>
                   </ul>
                 </div>
